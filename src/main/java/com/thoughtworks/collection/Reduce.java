@@ -13,8 +13,7 @@ public class Reduce {
     public double getAverage() {
         return arrayList.stream()
                 .reduce(Integer::sum)
-                .map(integer -> (double) integer)
-                .map(d -> (d / arrayList.size()))
+                .map(integer -> ((double) integer) / arrayList.size())
                 .get();
     }
 
