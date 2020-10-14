@@ -17,7 +17,9 @@ public class Reduce {
     }
 
     public int getMaxValue() {
-        throw new NotImplementedException();
+        return arrayList.stream()
+                .reduce((maxValue, integer) -> integer > maxValue ? integer : maxValue)
+                .get();
     }
 
     public int getLastOdd() {
